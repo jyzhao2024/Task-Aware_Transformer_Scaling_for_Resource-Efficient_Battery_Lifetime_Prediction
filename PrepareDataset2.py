@@ -130,7 +130,7 @@ v_upp = 3.60
 q_low = 0.61
 q_upp = 1.19
 lbl_factor = 3000
-aux_factor = 1190
+aux_factor = 1.3
 
 def get_xy(cyc_num):
     fea = dict()
@@ -244,3 +244,4 @@ save_obj(label, './data/ne_data/label_test')
 fea, label = get_xy(cycle_val)
 save_obj(fea, './data/ne_data/fea_val')
 save_obj(label, './data/ne_data/label_val')
+
