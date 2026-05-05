@@ -1,4 +1,3 @@
-# 5-Result visualization (ONLY BEFORE / BASE)
 import pickle
 import numpy as np
 import pandas as pd
@@ -14,7 +13,7 @@ pd.set_option("display.expand_frame_repr", False)
 def load_obj(name):
     with open(name + '.pkl', 'rb') as f:
         return pickle.load(f)
-
+    
 result = load_obj('./result/****')
 print(result.keys())
 
@@ -39,8 +38,8 @@ rmse_before_list, r2_before_list, mae_before_list, wmape_before_list = [], [], [
 
 for (code, name) in sort_new_test[:]:
     rul_true = result[name]['rul']['true']
-    rul_base = result[name]['rul']['base']
-
+    rul_base = result[name]['rul']['base']         
+  
     rmse_before = np.sqrt(mean_squared_error(rul_true, rul_base))
     r2_before = r2_score(rul_true, rul_base)
     wmape_before = cal_wmape(rul_base, rul_true)
@@ -63,4 +62,3 @@ table.loc['All', ['mae_before']] = ['%.3g' % np.mean(mae_before_list)]
 
 pd.set_option('display.max_rows', None)
 print(table.to_string(index=False))
-
