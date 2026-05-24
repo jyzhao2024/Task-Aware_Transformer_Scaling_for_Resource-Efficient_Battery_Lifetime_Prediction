@@ -4,6 +4,7 @@ import pandas as pd
 from skimage.metrics import mean_squared_error
 from sklearn.metrics import r2_score, mean_absolute_error
 
+
 pd.set_option("display.max_rows", None)
 pd.set_option("display.max_columns", None)
 pd.set_option("display.width", 500)
