@@ -3,7 +3,7 @@ import numpy as np
 
 
 class EarlyStopping:
-    """Early stops the training if validation loss doesn't improve after a given patience."""
+
     def __init__(self, patience=7, verbose=False, delta=0):
         """
         Args:
